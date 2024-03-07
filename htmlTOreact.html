@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformation d'un fichier HTML en React App</title>
+  </head>
+  <body>
+    <h1 id="root">My first React project</h1>
+    <h1 id="rot">My first React project</h1>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function Myfunction() {
+        return <div>J'utilise une fonction avec react</div>
+      }
+      const Functionfleche = () =>{
+        return <div>Fonction avec les fléches</div>
+      }
+      /* console.log(React) */
+      // ReactDOM.render(
+      // <div>test to my react project</div>, document.getElementById('root')
+      // )
+      ReactDOM.render(<Functionfleche />, document.getElementById("root"));
+      ReactDOM.render(<Myfunction />, document.getElementById("rot"));
+    </script>
+  </body>
+</html>

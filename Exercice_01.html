@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison jungle App</title>
+  </head>
+  <body>
+    <!-- Réutiliser le composant Banner de ce chapitre qui présente le nom de notre boutique. Vous devez sortir le titre dans une variable JavaScript : le titre doit initialement être en minuscules et être transformé en majuscules avec du JavaScript. -->
+    <!--  -->
+    <!-- Créer un composant <Cart /> (panier) qui viendra sous notre titre. -->
+    <!--  -->
+    <!-- Le panier contient 3 plantes : un monstera, un lierre et un bouquet de fleurs. -->
+    <!--  -->
+    <!-- Créer 3 variables pour les prix des plantes : le monstera coûte 8, le lierre coûte 10, et le bouquet de fleurs coûte 15. -->
+    <!--  -->
+    <!-- Le panier contient une liste (<ul> 😉), et chaque élément présente le nom de l'article, et le prix. -->
+    <!--  -->
+    <!-- Le total du panier additionne les trois prix. -->
+    <div id="root">My App</div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function Banner() {
+        const shopeTitle = "la maison jungle";
+        return <h1>{shopeTitle.toUpperCase()}</h1>;
+      }
+
+      function Cart() {
+        const monsteraPrice = 8;
+        const ivyPrice = 10;
+        const flowerPrice = 15;
+        return (
+          <div>
+            <h2>Panier</h2>
+            <ul>
+              <li>Monstera : {monsteraPrice}€</li>
+              <li>Lierre : {ivyPrice}€</li>
+              <li>Fleurs : {flowerPrice}€</li>
+            </ul>
+            Total : {monsteraPrice + ivyPrice + flowerPrice}€
+          </div>
+        );
+      }
+      ReactDOM.render(
+        <div>
+          <Banner /> <Cart />
+        </div>,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
